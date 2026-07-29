@@ -426,6 +426,7 @@ def cmd_dump(args):
 
     written = []
     for i, (logon_hex, account) in enumerate(to_dump, 1):
+        print()
         logging.info("[%d/%d] Dumping TGT for %s (%s) ..." % (i, len(to_dump), account, logon_hex))
         tgt_text = _run_cmd(session, "klist tgt -li %s" % logon_hex)
         if not tgt_text:
