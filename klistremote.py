@@ -901,6 +901,7 @@ def cmd_dump(args):
     # ── Write ccache files ───────────────────────────────────────────────────
     written = []
     for i, ((logon_hex, account), tgt_text) in enumerate(zip(to_dump, tgt_texts), 1):
+        print()
         logging.info("[%d/%d] %s (%s) ..." % (i, len(to_dump), account, logon_hex))
         if not tgt_text:
             logging.error("  No output for %s" % account)
